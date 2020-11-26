@@ -1,0 +1,316 @@
+nav button .fal {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid grey;
+    padding: 10px;
+    color: rgba(142, 142, 147, 1);
+    margin-top: 10px;
+}
+
+.blue h1 {
+    margin-top: -30px;
+    margin-left: 40px;
+    color: rgba(219, 48, 34, 1);
+    font-weight: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+
+#search {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    color: gray;
+    width: 400px;
+    height: 40px;
+    font-weight: 600;
+    margin-left: 145px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    margin-top: 10px;
+}
+
+.icon {
+    padding: 22px 160px;
+    min-width: 50px;
+    text-align: center;
+    margin-left: 350px;
+    color: gray;
+    position: absolute;
+}
+
+.shopping img {
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+}
+
+.login button {
+    border-radius: 20px;
+    background-color: rgba(219, 48, 34, 1);
+    border: 1px solid gray;
+    width: 100px;
+    height: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.login {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.signup button {
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid gray;
+    width: 100px;
+    height: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: gray;
+}
+
+.signup {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+section {
+    /* background-color: #E5E5E5; */
+    margin-top: 20px;
+}
+
+.container .benjamin h3 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-top: -100px;
+    text-align: center;
+}
+
+.info {
+    margin-top: 30px;
+}
+
+.info h5 {
+    text-align: center;
+    margin-top: -100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+
+.info .tshirt {
+    margin-right: 20px;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.info .pants {
+    margin-right: 20px;
+    border-radius: 12px;
+    padding: 30px 0 0 8px;
+}
+
+.info .jacket {
+    margin-right: 20px;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.info .shoes {
+    border-radius: 12px;
+    padding: 60px 0 0 10px;
+}
+
+.info .levis {
+    margin-right: 20px;
+    border-radius: 12px;
+    padding: 50px;
+}
+
+.info2 img {
+    width: 206px;
+    height: 250px;
+}
+
+
+/* .card-deck .card {
+    width: 206px;
+    height: 220px;
+}
+
+.card-deck .card h5 {
+    text-align: center;
+    margin-top: -100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+
+.card-deck .card .tsirt {
+    width: 116px;
+    height: 146px;
+    margin-left: 34px;
+    margin-top: 30px;
+}
+
+.card-deck .card .shorts {
+    margin-left: 15px;
+    margin-top: 25px;
+    width: 116px;
+    height: 146px;
+}
+
+.card-deck .card .jacket {
+    margin-left: 35px;
+    margin-top: 30px;
+}
+
+.card-deck .card .pants {
+    margin-left: 60px;
+    margin-top: 40px;
+}
+
+.card-deck .card .shoes {
+    margin-top: 50px;
+    margin-left: 10px;
+} */
+
+
+/* .row {
+    background-color: black;
+} */
+
+.info2 {
+    margin-bottom: 30px;
+}
+
+.category {
+    margin-top: 50px;
+}
+
+.category h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 37px;
+    font-weight: bold;
+    color: black;
+}
+
+.category h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 1px 1px 10px
+}
+
+.card h5 {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.card h6 {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #DB3022;
+    margin-left: 10px;
+}
+
+.card p {
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: #9B9B9B;
+    margin-left: 10px;
+    margin-bottom: 7px;
+}
+
+.suit1 {
+    margin-right: 15px;
+}
+
+
+/* section .row .ian {
+    padding-left: 50px;
+} */
+
+
+/* nav form {
+    margin-left: 300px;
+} */
+
+
+/* responsive nav */
+
+@media (max-width: 992px) {
+    #search {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        padding: 10px;
+        color: gray;
+        width: 300px;
+        height: 30px;
+        font-weight: 600;
+        margin-left: 10px;
+        border-radius: 20px;
+        border: 2px solid grey;
+        margin-top: 10px;
+    }
+    .icon {
+        min-width: 50px;
+        text-align: center;
+        color: gray;
+        position: absolute;
+        margin-left: 260px;
+        padding: 18px;
+    }
+    nav button .fal {
+        margin-top: -4px;
+    }
+    .shopping img {
+        width: 25px;
+        height: 25px;
+        margin-top: -4px;
+        margin-left: 15px;
+    }
+    .login button {
+        width: 300px;
+        height: 36px;
+    }
+    .signup button {
+        width: 300px;
+        height: 36px;
+    }
+    .info .shoes {
+        margin-right: 20px;
+    }
+    /* .card-deck .card {
+        width: 126px;
+        height: 120px;
+    }
+    .card-deck .card img {
+        width: 50px;
+        height: 80px;
+    }
+    .card-deck .card h5 {
+        text-align: center;
+        margin-top: -80px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+    } */
+}
