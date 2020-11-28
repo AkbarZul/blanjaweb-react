@@ -1,0 +1,33 @@
+ .tshirt {
+    margin-right: 20px;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+ .pants {
+    margin-right: 20px;
+    border-radius: 12px;
+    padding: 30px 0 0 8px;
+}
+
+.info .jacket {
+    margin-right: 20px;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.info .shoes {
+    border-radius: 12px;
+    padding: 60px 0 0 10px;
+}
+
+.info .levis {
+    margin-right: 20px;
+    border-radius: 12px;
+    padding: 50px;
+}
+
+.info2 img {
+    width: 206px;
+    height: 250px;
+}
