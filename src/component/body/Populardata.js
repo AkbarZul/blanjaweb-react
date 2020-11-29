@@ -42,6 +42,14 @@ class Populardata extends Component {
                         <p className="card-text">{product_price}</p>
                         <p className="card-text">{category_name}</p>
                         <p className="card-text">{product_description}</p>
+                        <Link to={{
+                                   pathname:`/product/${id}`,
+                                   state: this.state
+                               }}>
+                        <Button class="btn btn-primary mt-4">
+                            Detail
+                        </Button>
+                        </Link>
                            {/* <div className="star">
                                 <img src={starRate} alt=""/>
                                 <img src={starRate} alt=""/>

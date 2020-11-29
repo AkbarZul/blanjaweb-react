@@ -77,3 +77,98 @@ nav button .fal {
     margin-top: 15px;
     margin-left: 20px;
 }
+
+.satu{
+    width: 36px;
+    height: 36px;
+    
+    background-color: black;
+    border-radius: 50%;
+    border: none;
+}
+
+.dua {
+    width: 36px;
+    height: 36px;
+    background-color: white !important;
+    border-radius: 50%;
+    border: 1px solid black !important;
+    
+}
+.tiga {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(184, 34, 34, 1) !important;
+    border-radius: 50%;
+    border: none;
+    
+}
+.empat {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(190, 169, 169, 1) !important;
+    border-radius: 50%;
+    border: none;
+    
+}
+
+.lima {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(226, 187, 141, 1) !important;
+    border-radius: 50%;
+    border: none;
+    
+}
+
+.enam {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(21, 24, 103, 1) !important;
+    border-radius: 50%;
+    border: none;
+    
+}
+
+.ukuran1 {
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: white !important;
+    color: black;
+    border: 1px soldi black;
+}
+
+.ukuran1:hover{
+    background-color: red !important;
+    color: white !important;
+}
+
+.ukuran2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: white !important;
+    color: black;
+    border: 1px soldi black;
+}
+
+.ukuran2:hover{
+    background-color: red !important;
+    color: white !important;
+}
+
+.discard {
+    background-color: white !important;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: black !important;
+    width: 200px;
+    height: 36px;
+}
+
+.discard:hover{
+    background-color: red !important;
+    color: white !important;
+}
+
