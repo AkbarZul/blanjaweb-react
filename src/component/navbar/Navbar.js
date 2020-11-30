@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Modal, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 // import "../product/product.css"
-
-
 import "./navbar.css";
+
+
 
 // class Navbar extends Component {
 //     render() {
@@ -15,7 +16,9 @@ import "./navbar.css";
 
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
+
       
+       
         return (
          <div>
           <div className="shadow p-3 mb-5 bg-white rounded">
@@ -32,17 +35,19 @@ import "./navbar.css";
 
              <div className="red">
                  <i className="far fa-search icon"></i>
-                 <input type="text" name="" id="search" placeholder="Search"/>
+                 <input type="text" name="" id="search" placeholder="Search" />
+                
              </div>
              <Button variant="link" onClick={handleShow}>
              <i className="fal fa-filter"></i>
             </Button>
              <div className="navbar-nav ml-auto"></div>
              <div className="shopping">
-             <button className="btn  my-2 my-sm-0">
-
+               <Link to={"/mybag"}>
+             <Button variant="link" className="btn  my-2 my-sm-0">
                  <img src="/assets/shopping-cart (2) 1.png" alt=""/>
-             </button>
+             </Button>
+             </Link>
              </div>
              <div className="login">
                  <button onclick="window.location.href='login.html'">Login</button>

@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './new.css'
 import axios from 'axios';
-const getUrl = "http://localhost:1000/products";
+const getUrl = "http://localhost:1000/products/new";
 
 class Newdata extends Component {
     state ={
@@ -13,7 +13,7 @@ class Newdata extends Component {
     getAllProducts = () => {
         axios.get(getUrl).then(({data}) => {
             this.setState({
-                products: data.data,
+                products: data,
             })
         }).catch(err => {
             console.log(err)
@@ -30,7 +30,7 @@ class Newdata extends Component {
             return (
                 <>
                 
-                {products.map(({id, product_name, product_price, category_name, product_description}) => {
+                {products.map(({id, product_name, product_price, category_name, product_description, product_create}) => {
                         return (
                             <Card className="card-style" style={{width: "18rem"}}>
                               

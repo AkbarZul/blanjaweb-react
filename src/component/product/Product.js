@@ -1,9 +1,19 @@
 import React, { Component } from 'react'
-// import { Button } from "react-bootstrap";
+import axios from 'axios';
+import { Button } from "react-bootstrap";
 import Navbar from "../navbar/Navbar";
+import Newdata from "../body/Newdata"
+import "../body/new.css"
 import "./product.css";
 
 class Product extends Component {
+    
+
+    CreateProduct = async () => {
+        let res = await axios.post('http://localhost:1000/history')
+        console.log(res)
+        
+    }
     render() {
         const {name, desc, price, brand } = this.props
         return (
@@ -57,19 +67,40 @@ class Product extends Component {
                 <button className="chat mt-3 rounded-pill">
                     chat
                 </button>
-                <button className="mybag ml-2 mt-3 rounded-pill">
+                <Button className="mybag ml-2 mt-3 rounded-pill">
                     Add bag
-                </button>
-                <button className="buy ml-2 mt-3 rounded-pill">
+                </Button>
+                <Button className="buy ml-2 mt-3 rounded-pill" onClick={this.CreateProduct}>
                     Buy Now
-                </button>
+                </Button>
                 </div>
                 
                 </div>
                 </div>
-                <p className="desc">{ desc }</p>
-                
+                <p className="informasi">Informasi Product</p>
+                <p className="informasi">Category</p>
                 <p className="brand">{ brand }</p>
+                <p className="informasi">Description</p>
+                <p className="desc">{ desc }</p>
+                <p className="informasi">Product Review</p>
+                <p className="informasi">5.0</p>
+                <img src="/assets/Rating 5 stars.png " className="mb-5" alt="..."/>
+                <section>
+        
+            <h2 className="part-section">You can also like this</h2>
+            <p>You’ve never seen it before!</p>
+        
+    </section>
+
+    <article>
+        
+            <div className="row d-flex flex-row justify-content-center">
+                <Newdata />
+            </div>
+        
+    </article>
+
+                
                 </div>
             </div>
         )
