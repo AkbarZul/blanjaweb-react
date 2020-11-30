@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import { Card, Button } from "react-bootstrap";
-import Navbar from "../component/navbar/Navbar";
 import { Link } from 'react-router-dom'
+import Navbar from "../component/navbar/Navbar";
+
 
 import "../styles/mybag.css"
+import "../styles/check.css"
 
-class Mybag2 extends Component {
+class CheckOut2 extends Component {
+
     constructor(){
         super();
         this.state={
@@ -13,23 +15,24 @@ class Mybag2 extends Component {
         }
     }
 
+
     render() {
         return (
             <div>
                 <Navbar/>
+
                 <div className="container">
-                    <h1 style={{fontSize: '34px', fontWeight:'700'}}>My Bag</h1>
+                    <h1 style={{fontSize: '34px', fontWeight:'700'}}>CheckOut</h1>
+                    <p className="mt-3 ttl-addrs">Shipping Address</p>
                     <div className="d-flex ">
                         <div className="left">
-                            <div className='col chart justify-content-between'>
-                                <div className="selectAll">
-                                    <div className="mt-3">
-                                        <input type="checkbox" className="cek" />
+                            <div className='col address'>
+                                <p >Andreas Jane</p>
+                                <p>Perumahan Sapphire Mediterania, Wiradadi, Kec. Sokaraja, Kabupaten Banyumas, Jawa Tengah, 53181 [Tokopedia Note: blok c 16] Sokaraja, Kab. Banyumas, 53181</p>
+                                <Link className="text-decoration-none">
+                                    <div className='btn-choose-address'>
+                                        <p className='addres-btn'>Choose another address</p>
                                     </div>
-                                    <p className="ml-3 selectitem">Select all items (2 items selected)</p>
-                                </div>
-                                <Link>
-                                    <p style={{color: '#DB3022', marginTop:'10px'}}>Delete</p>
                                 </Link>
                             </div>
                             <div className='col prodct justify-content-between'>
@@ -64,9 +67,9 @@ class Mybag2 extends Component {
                                     <p className="text-price text-muted">Total price</p>
                                     <p className="pay">Rp.200.000</p>
                                 </div>
-                                <Link className="text-decoration-none" to="/checkout">
+                                <Link className="text-decoration-none">
                                 <div className="btn-buy">
-                                    <p className="text-buy">Buy</p>
+                                    <p className="text-buy">Select payment</p>
                                 </div>
                                 </Link>
                             </div>
@@ -78,4 +81,5 @@ class Mybag2 extends Component {
     }
 }
 
-export default Mybag2;
+
+export default CheckOut2;
