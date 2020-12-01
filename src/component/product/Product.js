@@ -7,23 +7,46 @@ import Rating from "../rating/Rating";
 import "../body/new.css"
 import "./product.css";
 
+
+const getUrl = 'http://localhost:1000/history'
+
 class Product extends Component {
+
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+                count: 0
+        }
+    }
+    
+    handleClickQty() {
+        this.setState({count:this.state.count + 1})
+      }
+      handleClickQtyMin() {
+        this.setState({count:this.state.count - 1})
+      }
+
+    handleChange = (event) => {
+        this.setState({
+             [event.target.name] : event.target.value
+        })
+    }
     
 
-    CreateHistory = async event  => {
-
-        // const { name, price, brand} = this.props;
-
-        // const body = {
-        //     product_name: name,
-        //     category_name: brand,
-        //     product_price: price, 
-        // }
-
+    handleSubmit = async (event) => {
         event.preventDefault();
-        let res = await axios.post(`http://localhost:1000/history`)
-        console.log(res)
-        
+        const { name, price, brand  } = this.props
+            const body = {
+                name: name,
+                price: price,
+                color: brand,
+            }
+        await axios.post(getUrl, body).then((res)=>{
+            console.log(res)
+        }).catch((err)=> {
+            console.log(err)
+        })
     }
     render() {
         const {name, desc, price, brand, rating } = this.props
@@ -81,7 +104,7 @@ class Product extends Component {
                 <Button className="mybag ml-2 mt-3 rounded-pill">
                     Add bag
                 </Button>
-                <Button className="buy ml-2 mt-3 rounded-pill" onClick={this.CreateHistory}>
+                <Button className="buy ml-2 mt-3 rounded-pill" onClick={this.handleSubmit}>
                     Buy Now
                 </Button>
                 </div>
