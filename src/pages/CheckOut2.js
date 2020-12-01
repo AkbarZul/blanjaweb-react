@@ -27,8 +27,8 @@ class CheckOut2 extends Component {
                     <div className="d-flex ">
                         <div className="left">
                             <div className='col address'>
-                                <p >Andreas Jane</p>
-                                <p>Perumahan Sapphire Mediterania, Wiradadi, Kec. Sokaraja, Kabupaten Banyumas, Jawa Tengah, 53181 [Tokopedia Note: blok c 16] Sokaraja, Kab. Banyumas, 53181</p>
+                                <p >Akbar Zulfikar</p>
+                                
                                 <Link className="text-decoration-none">
                                     <div className='btn-choose-address'>
                                         <p className='addres-btn'>Choose another address</p>
