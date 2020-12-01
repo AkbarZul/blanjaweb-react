@@ -99,7 +99,12 @@ import "./navbar.css";
           </Modal.Header>
           <Modal.Body>
           <div className="d-flex">
+          <Link to={{
+                        pathname: '/category',
+                        search: 'q=baju'
+                    }}>
           <button className="ukuran1 mr-3">All</button>
+          </Link>
                 <button className="ukuran1 mr-3">Women</button>
                 <button className="ukuran1 mr-3">Men</button>
                 </div>

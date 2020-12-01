@@ -3,19 +3,30 @@ import axios from 'axios';
 import { Button } from "react-bootstrap";
 import Navbar from "../navbar/Navbar";
 import Newdata from "../body/Newdata"
+import Rating from "../rating/Rating";
 import "../body/new.css"
 import "./product.css";
 
 class Product extends Component {
     
 
-    CreateProduct = async () => {
-        let res = await axios.post('http://localhost:1000/history')
+    CreateHistory = async event  => {
+
+        // const { name, price, brand} = this.props;
+
+        // const body = {
+        //     product_name: name,
+        //     category_name: brand,
+        //     product_price: price, 
+        // }
+
+        event.preventDefault();
+        let res = await axios.post(`http://localhost:1000/history`)
         console.log(res)
         
     }
     render() {
-        const {name, desc, price, brand } = this.props
+        const {name, desc, price, brand, rating } = this.props
         return (
             <div>
                 <Navbar/>
@@ -34,8 +45,8 @@ class Product extends Component {
                 <div className="col-7">
                     <div>
                 <p className="name">{ name }</p>
-                <img src="/assets/Rating 5 stars.png " className="mb-5" alt="..."/>
-                <p className="price">{ price }</p>
+                <Rating product_rating={rating}/>
+                <p className="price">Rp. { price }</p>
                 <p className="color">Color</p>
                 </div>
                 <button className="satu mr-3"></button>
@@ -70,7 +81,7 @@ class Product extends Component {
                 <Button className="mybag ml-2 mt-3 rounded-pill">
                     Add bag
                 </Button>
-                <Button className="buy ml-2 mt-3 rounded-pill" onClick={this.CreateProduct}>
+                <Button className="buy ml-2 mt-3 rounded-pill" onClick={this.CreateHistory}>
                     Buy Now
                 </Button>
                 </div>
@@ -84,7 +95,7 @@ class Product extends Component {
                 <p className="desc">{ desc }</p>
                 <p className="informasi">Product Review</p>
                 <p className="informasi">5.0</p>
-                <img src="/assets/Rating 5 stars.png " className="mb-5" alt="..."/>
+                <Rating product_rating={rating}/>
                 <section>
         
             <h2 className="part-section">You can also like this</h2>

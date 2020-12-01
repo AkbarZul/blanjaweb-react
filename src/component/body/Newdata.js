@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Rating from "../rating/Rating";
 import './new.css'
 import axios from 'axios';
 const getUrl = "http://localhost:1000/products/new";
@@ -30,7 +31,7 @@ class Newdata extends Component {
             return (
                 <>
                 
-                {products.map(({id, product_name, product_price, category_name, product_description, product_create}) => {
+                {products.map(({id, product_name, product_price, category_name, product_description, product_rating}) => {
                         return (
                             <Card className="card-style" style={{width: "18rem"}}>
                               
@@ -41,6 +42,7 @@ class Newdata extends Component {
                         <p className="card-text">{product_price}</p>
                         <p className="card-text">{category_name}</p>
                         <p className="card-text">{product_description}</p>
+                        <Rating product_rating={product_rating}/>
                         <Link to={{
                                    pathname:`/product/${id}`,
                                    state: this.state

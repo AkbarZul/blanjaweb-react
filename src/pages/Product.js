@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Productname from "../component/product/Product";
+import Rating from "../component/rating/Rating";
 
 const getUrl = "http://localhost:1000/product/";
 
@@ -34,7 +35,7 @@ class Product extends Component {
         return (
             <div>
                 
-                <Productname name={this.state.product.product_name} brand={this.state.product.category_name} desc={this.state.product.product_description} price={this.state.product.product_price}/>
+                <Productname name={this.state.product.product_name} brand={this.state.product.category_name} desc={this.state.product.product_description} price={this.state.product.product_price} rating={this.state.product.product_rating}/>
             </div>
         )
     }

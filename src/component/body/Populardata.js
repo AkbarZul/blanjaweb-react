@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Rating from "../rating/Rating";
 import './new.css'
 
 
@@ -42,6 +43,7 @@ class Populardata extends Component {
                         <p className="card-text">{product_price}</p>
                         <p className="card-text">{category_name}</p>
                         <p className="card-text">{product_description}</p>
+                        <Rating product_rating={product_rating}/>
                         <Link to={{
                                    pathname:`/product/${id}`,
                                    state: this.state
