@@ -24,6 +24,13 @@ class Newdata extends Component {
     componentDidMount = () => {
         this.getAllProducts()
     }
+
+    componentDidUpdate = (prevProps) => {
+        if (this.props.match !== prevProps.match) {
+            this.getProduct(this.props.match);
+        }
+    }
+
     render() {
         const {products} = this.state;
         console.log(this.state.products)

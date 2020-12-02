@@ -73,15 +73,6 @@
     color: black;
 }
 
-.minus {
-    
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    border: none;
-    padding-top: 5px;
-
-}
 
 .plus {
     
@@ -99,7 +90,7 @@
     height: 36px;
     border: none;
     padding-top: 5px;
-    margin-left: 10px;
+    margin-left: 90px !important;
     
 
 }
@@ -227,25 +218,6 @@
     color: black;
 }
 
-.minus {
-    
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    border: none;
-    padding-top: 5px;
-
-}
-
-.plus {
-    
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    border: none;
-    padding-top: 5px;
-    
-}
 
 .minus2 {
     border-radius: 50%;

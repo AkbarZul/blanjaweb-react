@@ -12,10 +12,14 @@ import "../styles/home.css";
 
 
 class Home extends Component {
+
+    state = {
+        searchField: '',
+    }
     render() {
         return (
             <>
-            <Navbar/>
+            <Navbar handleChange={(e) => this.setState({searchField:e.target.value})}/>
             <Carousel/>
             <Category/>
             <New/>

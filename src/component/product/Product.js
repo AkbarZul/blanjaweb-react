@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Button } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 import Navbar from "../navbar/Navbar";
 import Newdata from "../body/Newdata"
 import Rating from "../rating/Rating";
@@ -16,40 +17,81 @@ class Product extends Component {
         super(props)
     
         this.state = {
-                count: 0
+                count: 0,
+                checkout: [],
+                mybags: []
         }
     }
     
-    handleClickQty() {
-        this.setState({count:this.state.count + 1})
-      }
-      handleClickQtyMin() {
-        this.setState({count:this.state.count - 1})
-      }
+    tambah = () => {
+        this.setState(prevState => ({
+            count: prevState.count + 1
+        }));
+    };
+
+    kurang = () => {
+        this.setState(prevState => ({
+            count: Math.max(prevState.count -1, 0)
+        }))
+    } 
 
     handleChange = (event) => {
         this.setState({
              [event.target.name] : event.target.value
         })
     }
+
+   
+
+    // handleAddBag = (event) => {
+    //     event.preventDefault();
+    //     const total = this.state.count
+    //     const { id, name, price, color, size, } = this.props
+    //         const body = {
+    //             id: id,
+    //             name: name,
+    //             price: price,
+    //             color: color,
+    //             size: size,
+    //             total: total
+    //         }
+
+    //         function (bag, callback) {
+    //             const getBag = this.setState({
+    //                 mybags: body
+    //             }, localStorage.setItem('dataMybags', JSON.stringify(this.state.mybags))
+    //         )
+    //         }
+            
+    // }
     
 
     handleSubmit = async (event) => {
         event.preventDefault();
-        const { name, price, brand  } = this.props
+        const total = this.state.count
+        const { id, name, price, color, size,  } = this.props
             const body = {
                 name: name,
                 price: price,
-                color: brand,
+                color: color,
+                size: size,
+                total: total
             }
-        await axios.post(getUrl, body).then((res)=>{
-            console.log(res)
-        }).catch((err)=> {
-            console.log(err)
-        })
+            localStorage.setItem('dataCheckout', JSON.stringify(body))
+            await axios.post(getUrl, body).then(({data})=>{
+                this.setState({
+                    checkout: data.data,
+                })
+                console.log(data)
+            }).catch((err)=> {
+                console.log(err)
+            })
     }
+
+    
     render() {
-        const {name, desc, price, brand, rating } = this.props
+        const total = this.state.count
+        const {name, desc, price, brand, rating, size } = this.props
         return (
             <div>
                 <Navbar/>
@@ -82,18 +124,14 @@ class Product extends Component {
                 </div>
                 
                 <div className="d-flex">
-                <button className="minus mr-2">
+               
+        <p className="angka"> {size} </p>
+                
+                <button className="minus2 mr-2" onClick={this.kurang}>
                     <p>-</p>
                 </button>
-                <p className="angka">28</p>
-                <button className="plus ml-2">
-                    <p>+</p>
-                </button>
-                <button className="minus2 mr-2">
-                    <p>-</p>
-                </button>
-                <p className="angka">1</p>
-                <button className="plus ml-2">
+                <p className="angka"> {total} </p>
+                <button className="plus ml-2" onClick={this.tambah}>
                     <p>+</p>
                 </button>
                 </div>
@@ -101,13 +139,32 @@ class Product extends Component {
                 <button className="chat mt-3 rounded-pill">
                     chat
                 </button>
-                <Button className="mybag ml-2 mt-3 rounded-pill">
+                <Button className="mybag ml-2 mt-3 rounded-pill" onClick={this.handleAddBag}>
                     Add bag
                 </Button>
+                <Link to={{
+                        pathname: "/checkout",
+                        state: this.state.checkout}}>
                 <Button className="buy ml-2 mt-3 rounded-pill" onClick={this.handleSubmit}>
                     Buy Now
                 </Button>
+                </Link>
+              
                 </div>
+                <Link to={{
+                    pathname: "/addproduct",
+                }}>
+                <Button className="buy ml-2 mt-3 rounded-pill">
+                    Add Product
+                </Button>
+                </Link>
+                <Link to={{
+                    pathname: "/updateproduct",
+                }}>
+                <Button className="buy ml-2 mt-3 rounded-pill">
+                    update Product
+                </Button>
+                </Link>
                 
                 </div>
                 </div>

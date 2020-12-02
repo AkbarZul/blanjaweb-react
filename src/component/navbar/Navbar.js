@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Modal, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 // import "../product/product.css"
 import "./navbar.css";
-
 
 
 // class Navbar extends Component {
@@ -16,6 +16,9 @@ import "./navbar.css";
 
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
+
+        
+        
 
       
        
@@ -35,7 +38,7 @@ import "./navbar.css";
 
              <div className="red">
                  <i className="far fa-search icon"></i>
-                 <input type="text" name="" id="search" placeholder="Search" />
+                 <input type="text" name="" placeholder={props.placeholder} id="search" placeholder="Search" onChange={props.handleChange} />
                 
              </div>
              <Button variant="link" onClick={handleShow}>
@@ -50,10 +53,14 @@ import "./navbar.css";
              </Link>
              </div>
              <div className="login">
-                 <button onclick="window.location.href='login.html'">Login</button>
+             <Link to={"/login"}>
+                 <Button onclick="window.location.href='login.html'">Login</Button>
+                 </Link>
              </div>
              <div className="signup">
+             <Link to={"/signup"}>
                  <button onclick="window.location.href='signup.html'">Sign Up</button>
+                 </Link>
              </div>
          </div>
      </div>

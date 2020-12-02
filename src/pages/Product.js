@@ -35,7 +35,7 @@ class Product extends Component {
         return (
             <div>
                 
-                <Productname name={this.state.product.product_name} brand={this.state.product.category_name} desc={this.state.product.product_description} price={this.state.product.product_price} rating={this.state.product.product_rating}/>
+                <Productname name={this.state.product.product_name} brand={this.state.product.category_name} desc={this.state.product.product_description} price={this.state.product.product_price} rating={this.state.product.product_rating} size={this.state.product.product_size}/>
             </div>
         )
     }
