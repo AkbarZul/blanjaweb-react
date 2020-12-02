@@ -17,6 +17,7 @@ class CheckOut2 extends Component {
 
 
     render() {
+        const { name, price } = this.props;
         return (
             <div>
                 <Navbar/>

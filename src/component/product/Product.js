@@ -43,27 +43,24 @@ class Product extends Component {
 
    
 
-    // handleAddBag = (event) => {
-    //     event.preventDefault();
-    //     const total = this.state.count
-    //     const { id, name, price, color, size, } = this.props
-    //         const body = {
-    //             id: id,
-    //             name: name,
-    //             price: price,
-    //             color: color,
-    //             size: size,
-    //             total: total
-    //         }
+    handleAddBag = (event) => {
+        event.preventDefault();
+        const total = this.state.count
+        const { id, name, price, color, size, } = this.props
+            const body = {
+                id: id,
+                name: name,
+                price: price,
+                color: color,
+                size: size,
+                total: total
+            }
 
-    //         function (bag, callback) {
-    //             const getBag = this.setState({
-    //                 mybags: body
-    //             }, localStorage.setItem('dataMybags', JSON.stringify(this.state.mybags))
-    //         )
-    //         }
-            
-    // }
+            const bodyMyBags = this.setState({
+                mybags: body
+            })
+            localStorage.setItem('dataMybags', JSON.stringify(bodyMyBags))
+    }
     
 
     handleSubmit = async (event) => {
